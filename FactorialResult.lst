@@ -1,0 +1,345 @@
+-List-
+================================Assembling...================================
+           bgn 0
+           ldp
+           call main
+           end
+factorial  proc 1
+           sym 2 0 1      % n
+           lod 2 0
+           ldc 1
+           eq
+           fjp $$0
+           ldc 1
+           ret
+$$0        nop            % else part
+           lod 2 0
+           ldp 
+           lod 2 0
+           ldc 1
+           sub
+           push
+           call factorial
+           mult
+           ret
+main       proc 2
+           sym 2 0 1      % n
+           sym 2 1 1      % f
+           ldp
+           lda 2 0
+           push
+           call read
+           ldp
+           lod 2 0
+           push
+           call factorial
+           str 2 1
+           ldp 
+           lod 2 1
+           push
+           call write
+           ldp
+           call lf
+           ret
+
+*******************************Result*****************************************
+6
+
+###########################Statistics###########################
+
+*************************Instruction  Count***********************************
+nop    =    2,  			 bgn    =    1,  			 sym    =    5,  			 lod    =    9,  			 
+lda    =    1,  			 ldc    =    6,  			 str    =    1,  			 ldi    =    0,  			 
+sti    =    0,  			 not    =    0,  			 neg    =    0,  			 inc    =    0,  			 
+dec    =    0,  			 dup    =    0,  			 add    =    0,  			 sub    =    2,  			 
+mult    =    2,  			 div    =    0,  			 mod    =    0,  			 gt    =    0,  			 
+lt    =    0,  			 ge    =    0,  			 le    =    0,  			 eq    =    3,  			 
+ne    =    0,  			 and    =    0,  			 or    =    0,  			 swp    =    0,  			 
+ujp    =    0,  			 tjp    =    0,  			 fjp    =    3,  			 call    =    7,  			 
+ret    =    4,  			 ldp    =    7,  			 push    =    5,  			 proc    =    4,  			 
+end    =    1,  			 
+
+ Memory Approach Count : 22
+
+ Stack approach Count : 29
+
+ Total Cycle : 63
+
+---------------------------20181209---------------------------
+
+-List-
+================================Assembling...================================
+           bgn 0
+           ldp
+           call main
+           end
+factorial  proc 1
+           sym 2 0 1      % n
+           lod 2 0
+           ldc 1
+           eq
+           fjp $$0
+           ldc 1
+           ret
+$$0        nop            % else part
+           lod 2 0
+           ldp 
+           lod 2 0
+           ldc 1
+           sub
+           push
+           call factorial
+           mult
+           ret
+main       proc 2
+           sym 2 0 1      % n
+           sym 2 1 1      % f
+           ldp
+           lda 2 0
+           push
+           call read
+           ldp
+           lod 2 0
+           push
+           call factorial
+           str 2 1
+           ldp 
+           lod 2 1
+           push
+           call write
+           ldp
+           call lf
+           ret
+
+*******************************Result*****************************************
+24
+
+###########################Statistics###########################
+
+*************************Instruction  Count***********************************
+nop    =    3,  			 bgn    =    1,  			 sym    =    6,  			 lod    =    12,  			 
+lda    =    1,  			 ldc    =    8,  			 str    =    1,  			 ldi    =    0,  			 
+sti    =    0,  			 not    =    0,  			 neg    =    0,  			 inc    =    0,  			 
+dec    =    0,  			 dup    =    0,  			 add    =    0,  			 sub    =    3,  			 
+mult    =    3,  			 div    =    0,  			 mod    =    0,  			 gt    =    0,  			 
+lt    =    0,  			 ge    =    0,  			 le    =    0,  			 eq    =    4,  			 
+ne    =    0,  			 and    =    0,  			 or    =    0,  			 swp    =    0,  			 
+ujp    =    0,  			 tjp    =    0,  			 fjp    =    4,  			 call    =    8,  			 
+ret    =    5,  			 ldp    =    8,  			 push    =    6,  			 proc    =    5,  			 
+end    =    1,  			 
+
+ Memory Approach Count : 28
+
+ Stack approach Count : 38
+
+ Total Cycle : 79
+
+---------------------------20181209---------------------------
+
+-List-
+================================Assembling...================================
+           bgn 0
+           ldp
+           call main
+           end
+factorial  proc 1
+           sym 2 0 1      % n
+           lod 2 0
+           ldc 1
+           eq
+           fjp $$0
+           ldc 1
+           ret
+$$0        nop            % else part
+           lod 2 0
+           ldp 
+           lod 2 0
+           ldc 1
+           sub
+           push
+           call factorial
+           mult
+           ret
+main       proc 2
+           sym 2 0 1      % n
+           sym 2 1 1      % f
+           ldp
+           lda 2 0
+           push
+           call read
+           ldp
+           lod 2 0
+           push
+           call factorial
+           str 2 1
+           ldp 
+           lod 2 1
+           push
+           call write
+           ldp
+           call lf
+           ret
+
+*******************************Result*****************************************
+120
+
+###########################Statistics###########################
+
+*************************Instruction  Count***********************************
+nop    =    4,  			 bgn    =    1,  			 sym    =    7,  			 lod    =    15,  			 
+lda    =    1,  			 ldc    =    10,  			 str    =    1,  			 ldi    =    0,  			 
+sti    =    0,  			 not    =    0,  			 neg    =    0,  			 inc    =    0,  			 
+dec    =    0,  			 dup    =    0,  			 add    =    0,  			 sub    =    4,  			 
+mult    =    4,  			 div    =    0,  			 mod    =    0,  			 gt    =    0,  			 
+lt    =    0,  			 ge    =    0,  			 le    =    0,  			 eq    =    5,  			 
+ne    =    0,  			 and    =    0,  			 or    =    0,  			 swp    =    0,  			 
+ujp    =    0,  			 tjp    =    0,  			 fjp    =    5,  			 call    =    9,  			 
+ret    =    6,  			 ldp    =    9,  			 push    =    7,  			 proc    =    6,  			 
+end    =    1,  			 
+
+ Memory Approach Count : 34
+
+ Stack approach Count : 47
+
+ Total Cycle : 95
+
+---------------------------20181209---------------------------
+
+-List-
+================================Assembling...================================
+           bgn 0
+           ldp
+           call main
+           end
+factorial  proc 1
+           sym 2 0 1      % n
+           lod 2 0
+           ldc 1
+           eq
+           fjp $$0
+           ldc 1
+           ret
+$$0        nop            % else part
+           lod 2 0
+           ldp 
+           lod 2 0
+           ldc 1
+           sub
+           push
+           call factorial
+           mult
+           ret
+main       proc 2
+           sym 2 0 1      % n
+           sym 2 1 1      % f
+           ldp
+           lda 2 0
+           push
+           call read
+           ldp
+           lod 2 0
+           push
+           call factorial
+           str 2 1
+           ldp 
+           lod 2 1
+           push
+           call write
+           ldp
+           call lf
+           ret
+
+*******************************Result*****************************************
+120
+
+###########################Statistics###########################
+
+*************************Instruction  Count***********************************
+nop    =    4,  			 bgn    =    1,  			 sym    =    7,  			 lod    =    15,  			 
+lda    =    1,  			 ldc    =    10,  			 str    =    1,  			 ldi    =    0,  			 
+sti    =    0,  			 not    =    0,  			 neg    =    0,  			 inc    =    0,  			 
+dec    =    0,  			 dup    =    0,  			 add    =    0,  			 sub    =    4,  			 
+mult    =    4,  			 div    =    0,  			 mod    =    0,  			 gt    =    0,  			 
+lt    =    0,  			 ge    =    0,  			 le    =    0,  			 eq    =    5,  			 
+ne    =    0,  			 and    =    0,  			 or    =    0,  			 swp    =    0,  			 
+ujp    =    0,  			 tjp    =    0,  			 fjp    =    5,  			 call    =    9,  			 
+ret    =    6,  			 ldp    =    9,  			 push    =    7,  			 proc    =    6,  			 
+end    =    1,  			 
+
+ Memory Approach Count : 34
+
+ Stack approach Count : 47
+
+ Total Cycle : 95
+
+---------------------------20181211---------------------------
+
+-List-
+================================Assembling...================================
+           bgn 0
+           ldp
+           call main
+           end
+factorial  proc 1
+           sym 2 0 1      % n
+           lod 2 0
+           ldc 1
+           eq
+           fjp $$0
+           ldc 1
+           ret
+$$0        nop            % else part
+           lod 2 0
+           ldp 
+           lod 2 0
+           ldc 1
+           sub
+           push
+           call factorial
+           mult
+           ret
+main       proc 2
+           sym 2 0 1      % n
+           sym 2 1 1      % f
+           ldp
+           lda 2 0
+           push
+           call read
+           ldp
+           lod 2 0
+           push
+           call factorial
+           str 2 1
+           ldp 
+           lod 2 1
+           push
+           call write
+           ldp
+           call lf
+           ret
+
+*******************************Result*****************************************
+120
+
+###########################Statistics###########################
+
+*************************Instruction  Count***********************************
+nop    =    4,  			 bgn    =    1,  			 sym    =    7,  			 lod    =    15,  			 
+lda    =    1,  			 ldc    =    10,  			 str    =    1,  			 ldi    =    0,  			 
+sti    =    0,  			 not    =    0,  			 neg    =    0,  			 inc    =    0,  			 
+dec    =    0,  			 dup    =    0,  			 add    =    0,  			 sub    =    4,  			 
+mult    =    4,  			 div    =    0,  			 mod    =    0,  			 gt    =    0,  			 
+lt    =    0,  			 ge    =    0,  			 le    =    0,  			 eq    =    5,  			 
+ne    =    0,  			 and    =    0,  			 or    =    0,  			 swp    =    0,  			 
+ujp    =    0,  			 tjp    =    0,  			 fjp    =    5,  			 call    =    9,  			 
+ret    =    6,  			 ldp    =    9,  			 push    =    7,  			 proc    =    6,  			 
+end    =    1,  			 
+
+ Memory Approach Count : 34
+
+ Stack approach Count : 47
+
+ Total Cycle : 95
+
+---------------------------20181211---------------------------
+

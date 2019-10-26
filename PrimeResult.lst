@@ -1,0 +1,375 @@
+-List-
+================================Assembling...================================
+           bgn 1
+           sym 1 0 1
+           ldc 100
+           str 1 0
+           ldp
+           call main
+           end
+main       proc 5
+           sym 2 0 1      % i
+           sym 2 1 1      % j
+           sym 2 2 1      % k
+           sym 2 3 1      % rem
+           sym 2 4 1      % prime
+           ldc 2
+           str 2 0
+$$0        nop            % begin of outer while
+           lod 2 0
+           lod 1 0
+           le
+           fjp $$1
+           ldc 1
+           str 2 4
+           lod 2 0
+           ldc 2
+           div
+           str 2 2
+           ldc 2
+           str 2 1
+$$2        nop            % begin of inner while
+           lod 2 1
+           lod 2 2
+           le
+           fjp $$3
+           lod 2 0
+           lod 2 1
+           mod
+           str 2 3
+           lod 2 3        % if 
+           ldc 0
+           eq
+           fjp $$4
+           ldc 0
+           str 2 4
+$$4        nop
+           lod 2 1
+           inc
+           str 2 1
+           ujp $$2
+$$3        nop            % end of inner while
+           lod 2 4        % if
+           ldc 1
+           eq
+           fjp $$5
+           ldp
+           lod 2 0
+           push
+           call write
+$$5        nop
+           lod 2 0
+           inc
+           str 2 0
+           ujp $$0        % end of outer while
+$$1        nop
+           ldp
+           call lf
+           ret
+           bgn 1
+           sym 1 0 1
+           ldc 100
+           str 1 0
+           ldp
+           call main
+           end
+
+*******************************Result*****************************************
+2
+3
+5
+7
+11
+13
+17
+19
+23
+29
+31
+37
+41
+43
+47
+53
+59
+61
+67
+71
+73
+79
+83
+89
+97
+
+###########################Statistics###########################
+
+*************************Instruction  Count***********************************
+nop    =    5200,  			 bgn    =    1,  			 sym    =    6,  			 lod    =    15126,  			 
+lda    =    0,  			 ldc    =    3082,  			 str    =    5483,  			 ldi    =    0,  			 
+sti    =    0,  			 not    =    0,  			 neg    =    0,  			 inc    =    2500,  			 
+dec    =    0,  			 dup    =    0,  			 add    =    0,  			 sub    =    0,  			 
+mult    =    0,  			 div    =    99,  			 mod    =    2401,  			 gt    =    0,  			 
+lt    =    0,  			 ge    =    0,  			 le    =    2600,  			 eq    =    2500,  			 
+ne    =    0,  			 and    =    0,  			 or    =    0,  			 swp    =    0,  			 
+ujp    =    2500,  			 tjp    =    0,  			 fjp    =    5100,  			 call    =    27,  			 
+ret    =    1,  			 ldp    =    27,  			 push    =    25,  			 proc    =    1,  			 
+end    =    1,  			 
+
+ Memory Approach Count : 23716
+
+ Stack approach Count : 33816
+
+ Total Cycle : 46680
+
+---------------------------20181209---------------------------
+
+-List-
+================================Assembling...================================
+           bgn 1
+           sym 1 0 1
+           ldc 100
+           str 1 0
+           ldp
+           call main
+           end
+main       proc 5
+           sym 2 0 1      % i
+           sym 2 1 1      % j
+           sym 2 2 1      % k
+           sym 2 3 1      % rem
+           sym 2 4 1      % prime
+           ldc 2
+           str 2 0
+$$0        nop            % begin of outer while
+           lod 2 0
+           lod 1 0
+           le
+           fjp $$1
+           ldc 1
+           str 2 4
+           lod 2 0
+           ldc 2
+           div
+           str 2 2
+           ldc 2
+           str 2 1
+$$2        nop            % begin of inner while
+           lod 2 1
+           lod 2 2
+           le
+           fjp $$3
+           lod 2 0
+           lod 2 1
+           mod
+           str 2 3
+           lod 2 3        % if 
+           ldc 0
+           eq
+           fjp $$4
+           ldc 0
+           str 2 4
+$$4        nop
+           lod 2 1
+           inc
+           str 2 1
+           ujp $$2
+$$3        nop            % end of inner while
+           lod 2 4        % if
+           ldc 1
+           eq
+           fjp $$5
+           ldp
+           lod 2 0
+           push
+           call write
+$$5        nop
+           lod 2 0
+           inc
+           str 2 0
+           ujp $$0        % end of outer while
+$$1        nop
+           ldp
+           call lf
+           ret
+           bgn 1
+           sym 1 0 1
+           ldc 100
+           str 1 0
+           ldp
+           call main
+           end
+
+*******************************Result*****************************************
+2
+3
+5
+7
+11
+13
+17
+19
+23
+29
+31
+37
+41
+43
+47
+53
+59
+61
+67
+71
+73
+79
+83
+89
+97
+
+###########################Statistics###########################
+
+*************************Instruction  Count***********************************
+nop    =    5200,  			 bgn    =    1,  			 sym    =    6,  			 lod    =    15126,  			 
+lda    =    0,  			 ldc    =    3082,  			 str    =    5483,  			 ldi    =    0,  			 
+sti    =    0,  			 not    =    0,  			 neg    =    0,  			 inc    =    2500,  			 
+dec    =    0,  			 dup    =    0,  			 add    =    0,  			 sub    =    0,  			 
+mult    =    0,  			 div    =    99,  			 mod    =    2401,  			 gt    =    0,  			 
+lt    =    0,  			 ge    =    0,  			 le    =    2600,  			 eq    =    2500,  			 
+ne    =    0,  			 and    =    0,  			 or    =    0,  			 swp    =    0,  			 
+ujp    =    2500,  			 tjp    =    0,  			 fjp    =    5100,  			 call    =    27,  			 
+ret    =    1,  			 ldp    =    27,  			 push    =    25,  			 proc    =    1,  			 
+end    =    1,  			 
+
+ Memory Approach Count : 23716
+
+ Stack approach Count : 33816
+
+ Total Cycle : 46680
+
+---------------------------20181209---------------------------
+
+-List-
+================================Assembling...================================
+           bgn 1
+           sym 1 0 1
+           ldc 100
+           str 1 0
+           ldp
+           call main
+           end
+main       proc 5
+           sym 2 0 1      % i
+           sym 2 1 1      % j
+           sym 2 2 1      % k
+           sym 2 3 1      % rem
+           sym 2 4 1      % prime
+           ldc 2
+           str 2 0
+$$0        nop            % begin of outer while
+           lod 2 0
+           lod 1 0
+           le
+           fjp $$1
+           ldc 1
+           str 2 4
+           lod 2 0
+           ldc 2
+           div
+           str 2 2
+           ldc 2
+           str 2 1
+$$2        nop            % begin of inner while
+           lod 2 1
+           lod 2 2
+           le
+           fjp $$3
+           lod 2 0
+           lod 2 1
+           mod
+           str 2 3
+           lod 2 3        % if 
+           ldc 0
+           eq
+           fjp $$4
+           ldc 0
+           str 2 4
+$$4        nop
+           lod 2 1
+           inc
+           str 2 1
+           ujp $$2
+$$3        nop            % end of inner while
+           lod 2 4        % if
+           ldc 1
+           eq
+           fjp $$5
+           ldp
+           lod 2 0
+           push
+           call write
+$$5        nop
+           lod 2 0
+           inc
+           str 2 0
+           ujp $$0        % end of outer while
+$$1        nop
+           ldp
+           call lf
+           ret
+           bgn 1
+           sym 1 0 1
+           ldc 100
+           str 1 0
+           ldp
+           call main
+           end
+
+*******************************Result*****************************************
+2
+3
+5
+7
+11
+13
+17
+19
+23
+29
+31
+37
+41
+43
+47
+53
+59
+61
+67
+71
+73
+79
+83
+89
+97
+
+###########################Statistics###########################
+
+*************************Instruction  Count***********************************
+nop    =    5200,  			 bgn    =    1,  			 sym    =    6,  			 lod    =    15126,  			 
+lda    =    0,  			 ldc    =    3082,  			 str    =    5483,  			 ldi    =    0,  			 
+sti    =    0,  			 not    =    0,  			 neg    =    0,  			 inc    =    2500,  			 
+dec    =    0,  			 dup    =    0,  			 add    =    0,  			 sub    =    0,  			 
+mult    =    0,  			 div    =    99,  			 mod    =    2401,  			 gt    =    0,  			 
+lt    =    0,  			 ge    =    0,  			 le    =    2600,  			 eq    =    2500,  			 
+ne    =    0,  			 and    =    0,  			 or    =    0,  			 swp    =    0,  			 
+ujp    =    2500,  			 tjp    =    0,  			 fjp    =    5100,  			 call    =    27,  			 
+ret    =    1,  			 ldp    =    27,  			 push    =    25,  			 proc    =    1,  			 
+end    =    1,  			 
+
+ Memory Approach Count : 23716
+
+ Stack approach Count : 33816
+
+ Total Cycle : 46680
+
+---------------------------20181211---------------------------
+
